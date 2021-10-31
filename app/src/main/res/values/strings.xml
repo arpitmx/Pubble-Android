@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">pubblr</string>
+    <string name="app_name">pubbl.</string>
     <string name="label_add">Add to read later</string>
     <string name="quino">Quino.</string>
-    <string name="publist">pubblist.</string>
+    <string name="publist">pubbl.</string>
 </resources>
