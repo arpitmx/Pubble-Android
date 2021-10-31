@@ -12,5 +12,6 @@
 <!--    <color name="publist_yellow">#FF0048</color>-->
     <color name="publist_yellow">#FF0048</color>
     <color name="highlight_bg">#A9FF2663</color>
+    <color name="transparent">#00FFFFFF</color>
 <!--    <color name="publist_yellow">#FFEA00</color>-->
 </resources>

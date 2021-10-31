@@ -31,5 +31,25 @@
         <item name="android:background">@drawable/curved_corners_bottom_sheet</item>
     </style>
 
+    <style name="TransparentCompat" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="background">@color/transparent</item>
+        <item name="android:cacheColorHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+
+
+    </style>
+
+
+    <style name="SheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <!--<item name="android:windowCloseOnTouchOutside">false</item>-->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:colorBackground">     @android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.3</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
 
 </resources>

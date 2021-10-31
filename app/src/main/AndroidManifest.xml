@@ -15,27 +15,56 @@
         <activity
             android:name=".AuthActivity"
             android:exported="true" />
+
         <activity
-            android:name=".ReadLaterActivity"
+            android:name=".modal"
             android:exported="true"
-            android:label="@string/label_add">
+
+            />
+
+        <activity
+            android:name=".intents.ReadLaterActivity"
+            android:exported="true"
+            android:label="@string/label_add"
+            android:noHistory="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+
+            >
             <intent-filter>
                 <action android:name="android.intent.action.PROCESS_TEXT" />
-
                 <category android:name="android.intent.category.DEFAULT" />
 
                 <data android:mimeType="text/plain" />
             </intent-filter>
         </activity>
+
+
         <activity
             android:name=".MainActivity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service android:name=".tileServices.QuickAddNoteTileService"
+            android:icon="@drawable/ic_baseline_note_add_24"
+            android:label="@string/add_notes"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+            android:exported="true">
+
+        <intent-filter>
+            <action android:name="android.service.quicksettings.action.QS_TILE"/>
+
+        </intent-filter>
+
+
+        </service>
+
+
+
+
     </application>
 
 </manifest>

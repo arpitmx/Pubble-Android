@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-   
+    android:background="@color/white"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="220dp"
+    android:id="@+id/bottom_sheet_lin_lay"
 >
-
-
-
-
 
 
 <androidx.appcompat.widget.LinearLayoutCompat
@@ -45,8 +45,8 @@ android:weightSum="10">
         android:layout_weight="2"
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
-        android:scaleX="1.2"
-        android:scaleY="1.2"
+        android:scaleX="1"
+        android:scaleY="1"
         android:background="@null"
         android:src="@drawable/ic_baseline_edit_24"
         app:tint="@color/publist_yellow" />
@@ -54,45 +54,100 @@ android:weightSum="10">
 
 </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <EditText
-        android:id="@+id/edit_note_bottom_sheet"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <EditText
+                android:id="@+id/edit_note_bottom_sheet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleET"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:textColorHighlight="@color/highlight_bg"
+                android:background="@drawable/note_bg_two"
+                android:fontFamily="@font/mmedium"
+                android:textStyle="normal"
+                android:gravity="start"
+                android:maxHeight="350dp"
+                android:minHeight="300dp"
+                android:textColor="#303030"
+                android:hint="Start writing here..."
+                android:padding="5dp"
+                android:paddingStart="10dp"
+                android:textCursorDrawable="@null"
+                android:visibility="gone"
+                android:textSize="15dp" />
+
+
+
+
+
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+    </ScrollView>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/titleET"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="10dp"
-        android:textColorHighlight="@color/highlight_bg"
-        android:background="@drawable/note_bg_two"
-        android:fontFamily="@font/mmedium"
-        android:textStyle="normal"
-        android:gravity="start"
-
-        android:maxHeight="420dp"
-        android:minHeight="100dp"
-        android:textColor="#303030"
-        android:hint="Start writing here..."
-        android:padding="5dp"
-        android:paddingStart="10dp"
-        android:textCursorDrawable="@null"
-        android:visibility="visible"
-        android:textSize="15dp" />
-
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/bottomsheet_addnote_button"
-        android:layout_width="match_parent"
-        android:layout_height="52dp"
-        android:background="@drawable/note_add_button_bg"
-        android:textColor="@color/white"
-        android:layout_marginEnd="50dp"
-        android:layout_marginStart="50dp"
+        android:orientation="horizontal"
         android:layout_marginTop="5dp"
-        android:fontFamily="@font/hb"
-        android:layout_gravity="center_vertical"
-        android:textSize="17dp"
-        android:textAllCaps="false"
-        android:text="Add notes" />
+        android:weightSum="10"
+        android:elevation="5dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/lina"
+        >
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bottomsheet_cancel_button"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="3.5"
+            android:background="@null"
+            android:textColor="#7A7A7A"
+            android:gravity="center"
+            android:fontFamily="@font/hb"
+            android:layout_marginStart="100dp"
+            android:textSize="17dp"
+            android:textAllCaps="false"
+            android:text="Cancel" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bottomsheet_addnote_button"
+            android:layout_width="0dp"
+            android:layout_weight="6"
+            android:layout_height="48dp"
+            android:background="@drawable/note_add_button_bg"
+            android:textColor="@color/white"
+
+            android:fontFamily="@font/hb"
+            android:layout_gravity="center_vertical"
+            android:textSize="17dp"
+            android:textAllCaps="false"
+            android:text="Add notes" />
+
+
+
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>

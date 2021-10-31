@@ -27,9 +27,6 @@ public class NoteEditorActivity extends AppCompatActivity {
     AppDatabase db;
     Boolean newnote = true;
     Note note;
-    Snackbar snackbar;
-
-
 
 
     @Override
@@ -45,7 +42,6 @@ public class NoteEditorActivity extends AppCompatActivity {
         db = AppDatabase.getDbInstance(this.getApplicationContext());
         List<Note> noteList = db.noteDao().getAllNotes();
 
-        snackbar = Snackbar.make(binding.getRoot(), "www.journaldev.com", Snackbar.LENGTH_SHORT);
 
         title = binding.titleET;
         desc  = binding.NoteET;
@@ -81,7 +77,6 @@ public class NoteEditorActivity extends AppCompatActivity {
             }
 
         });
-
 
         binding.actionbarEditor.backbutton.setOnClickListener(view -> {
 
