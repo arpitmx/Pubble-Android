@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText">
+
+
+    <item
+        android:id="@+id/nav_notes"
+        android:title="Note" />
+
+    <item
+        android:id="@+id/nav_readlater"
+        android:title="Read Later" />
+.00
+</menu>

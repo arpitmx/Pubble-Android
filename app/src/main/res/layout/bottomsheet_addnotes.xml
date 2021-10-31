@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+>
+    <EditText
+        android:id="@+id/bottomsheet_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Title"
+        android:textSize="20dp"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/hb"
+        android:background="@drawable/title_bg"
+        android:gravity="center_vertical"
+        android:paddingStart="10dp"
+        android:elevation="4dp"
+        />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bottomsheet_addnote_button"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:background="@drawable/note_add_button_bg"
+        android:textColor="@color/white"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/hb"
+        android:textSize="17dp"
+        android:textAllCaps="false"
+        android:text="Add notes" />
+
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

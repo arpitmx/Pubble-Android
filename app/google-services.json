@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "811167392738",
+    "project_id": "quino-notes",
+    "storage_bucket": "quino-notes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:811167392738:android:e54eb50a6dd983e68f8fbb",
+        "android_client_info": {
+          "package_name": "com.bitpolarity.quicknotes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "811167392738-2lijrrjd772v0nv18d9ckosrigcd9vv2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiUCPbvGDVFc-hllCFqK3OC2jypKkIwO0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "811167392738-2lijrrjd772v0nv18d9ckosrigcd9vv2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/QuickNotes/app/src/main/res/drawable/dark_four_side_borders_post.xml" value="0.2717948717948718" />
+        <entry key="..\:/QuickNotes/app/src/main/res/drawable/dark_four_side_borders_post_dimmer.xml" value="0.2717948717948718" />
+        <entry key="..\:/QuickNotes/app/src/main/res/drawable/dark_item_event_bg.xml" value="0.2717948717948718" />
+        <entry key="..\:/QuickNotes/app/src/main/res/drawable/gradient_two.xml" value="0.2760416666666667" />
+        <entry key="..\:/QuickNotes/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.2760416666666667" />
+        <entry key="..\:/QuickNotes/app/src/main/res/drawable/ic_baseline_more_vert_24.xml" value="0.2657407407407407" />
+        <entry key="..\:/QuickNotes/app/src/main/res/drawable/ic_baseline_save_24.xml" value="0.2760416666666667" />
+        <entry key="..\:/QuickNotes/app/src/main/res/drawable/note_add_button_bg.xml" value="0.2657407407407407" />
+        <entry key="..\:/QuickNotes/app/src/main/res/drawable/note_bg.xml" value="0.25" />
+        <entry key="..\:/QuickNotes/app/src/main/res/drawable/title_bg.xml" value="0.2569230769230769" />
+        <entry key="..\:/QuickNotes/app/src/main/res/layout/actionbar_edit_notes.xml" value="0.264" />
+        <entry key="..\:/QuickNotes/app/src/main/res/layout/activity_auth.xml" value="0.2598958333333333" />
+        <entry key="..\:/QuickNotes/app/src/main/res/layout/activity_main.xml" value="0.37248840803709427" />
+        <entry key="..\:/QuickNotes/app/src/main/res/layout/activity_note_addition.xml" value="0.2598958333333333" />
+        <entry key="..\:/QuickNotes/app/src/main/res/layout/activity_note_editor.xml" value="0.264" />
+        <entry key="..\:/QuickNotes/app/src/main/res/layout/bottombar_edit_notes.xml" value="0.264" />
+        <entry key="..\:/QuickNotes/app/src/main/res/layout/bottomsheet_addnotes.xml" value="0.30937098844672656" />
+        <entry key="..\:/QuickNotes/app/src/main/res/layout/note_row.xml" value="0.2" />
+        <entry key="..\:/QuickNotes/app/src/main/res/layout/quino_actionbar.xml" value="0.4" />
+        <entry key="..\:/QuickNotes/app/src/main/res/menu/nav_menu.xml" value="0.24635416666666668" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

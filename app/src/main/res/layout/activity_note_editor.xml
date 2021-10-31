@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".NoteEditorActivity"
+    android:weightSum="10"
+    >
+
+
+    <include
+        android:id="@+id/actionbar_editor"
+        layout="@layout/actionbar_edit_notes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/actionbar_editor">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+        <EditText
+            android:id="@+id/titleET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/note_bg"
+            android:fontFamily="@font/hmed"
+            android:hint="Title"
+
+            android:padding="5dp"
+            android:textColorHighlight="@color/highlight_bg"
+
+            android:paddingStart="15dp"
+            android:textCursorDrawable="@null"
+            android:textSize="25dp" />
+
+        <EditText
+            android:id="@+id/NoteET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titleET"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="5"
+
+            android:textColorHighlight="@color/highlight_bg"
+            android:background="@drawable/note_bg"
+            android:fontFamily="@font/mmedium"
+            android:textStyle="normal"
+            android:gravity="start"
+            android:textColor="#131313"
+            android:hint="Start writing here..."
+            android:minHeight="400dp"
+            android:padding="5dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="20dp"
+            android:textCursorDrawable="@null"
+            android:textSize="15dp" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/saveBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/ic_baseline_save_24"
+        android:text="Save"
+        app:tint="@color/publist_yellow"
+
+        />
+
+
+<!--    <include-->
+<!--        android:id="@+id/bottom_bar"-->
+<!--        layout="@layout/bottombar_edit_notes"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentBottom="true" />-->
+
+</RelativeLayout>
