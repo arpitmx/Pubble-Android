@@ -16,6 +16,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.bitpolarity.quicknotes.R;
@@ -39,8 +40,6 @@ public class  ReadLaterActivity extends Activity {
 
         CharSequence text = getIntent().getCharSequenceExtra(Intent.EXTRA_PROCESS_TEXT);
         showBottomSheet(text.toString());
-
-
     }
 
 
@@ -57,8 +56,10 @@ public class  ReadLaterActivity extends Activity {
 
         EditText title = bottomSheetDialog.findViewById(R.id.bottomsheet_title_tv);
         EditText edit_area = bottomSheetDialog.findViewById(R.id.edit_note_bottom_sheet);
+       // LinearLayoutCompat bottomSheet = (LinearLayoutCompat) bottomSheetDialog.findViewById(R.id.bottom_sheet_lin_lay);
+        //BottomSheetBehavior bottomSheetBehavior = BottomSheetBehavior.from(bottomSheet);
 
-
+        title.requestFocus();
 
         assert edit_area != null;
         edit_area.setText(note);
@@ -76,9 +77,9 @@ public class  ReadLaterActivity extends Activity {
 
         });
 
-
-
         bottomSheetDialog.show();
+
+
         assert editbtn != null;
         editbtn.setOnClickListener(view -> {
 
@@ -94,18 +95,11 @@ public class  ReadLaterActivity extends Activity {
         });
 
 
+
         cancelbtn.setOnClickListener(view -> {
            bottomSheetDialog.dismiss();
            finish();
         });
-
-
-
-
-        if(!bottomSheetDialog.isShowing()) {
-            finish();
-        }
-
 
     }
 

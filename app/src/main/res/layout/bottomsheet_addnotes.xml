@@ -7,9 +7,7 @@
     android:orientation="vertical"
     android:background="@color/white"
     app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
-    app:behavior_hideable="true"
-    app:behavior_peekHeight="220dp"
-    android:id="@+id/bottom_sheet_lin_lay"
+     android:id="@+id/bottom_sheet_lin_lay"
 >
 
 
@@ -26,6 +24,9 @@ android:weightSum="10">
         android:layout_height="60dp"
         android:layout_weight="8"
         android:hint="Title"
+        android:focusable="true"
+        android:clickable="true"
+        android:focusedByDefault="true"
         android:textSize="20dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="15dp"
@@ -134,7 +135,7 @@ android:weightSum="10">
             android:layout_height="48dp"
             android:background="@drawable/note_add_button_bg"
             android:textColor="@color/white"
-
+            android:gravity="center"
             android:fontFamily="@font/hb"
             android:layout_gravity="center_vertical"
             android:textSize="17dp"

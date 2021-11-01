@@ -1,6 +1,7 @@
 package com.bitpolarity.quicknotes.MainActivity.adapter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,15 +41,23 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteVH> {
     public NoteVH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         View view = LayoutInflater.from(context).inflate(R.layout.note_row, parent , false);
-
         return new NoteVH(view,ul);
     }
 
     @Override
     public void onBindViewHolder(@NonNull NoteVH holder, int position) {
+
+        if (!noteList.get(position).title.isEmpty()){
+            holder.title.setVisibility(View.VISIBLE);
             holder.title.setText(noteList.get(position).title);
             holder.desc.setText(noteList.get(position).desc);
-            setAnimation(holder.itemView,position);
+        }else{
+            holder.title.setVisibility(View.GONE);
+            holder.desc.setText(noteList.get(position).desc);
+            holder.desc.setTextSize(16f);
+        }
+
+        setAnimation(holder.itemView,position);
     }
 
     @Override

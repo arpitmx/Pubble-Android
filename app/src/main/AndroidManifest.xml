@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QuickNotes">
         <activity
-            android:name=".NoteEditorActivity"
+            android:name=".NoteEditor.NoteEditorActivity"
             android:exported="true" />
         <activity
             android:name=".AuthActivity"
@@ -26,7 +26,7 @@
             android:name=".intents.ReadLaterActivity"
             android:exported="true"
             android:label="@string/label_add"
-            android:noHistory="true"
+
             android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
 
             >
@@ -56,12 +56,14 @@
 
         <intent-filter>
             <action android:name="android.service.quicksettings.action.QS_TILE"/>
-
         </intent-filter>
-
-
         </service>
 
+        <service android:name=".powerbutton.LockService" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </service>
 
 
 

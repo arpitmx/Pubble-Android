@@ -1,11 +1,13 @@
-package com.bitpolarity.quicknotes;
+package com.bitpolarity.quicknotes.NoteEditor;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -33,15 +35,14 @@ public class NoteEditorActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityNoteEditorBinding.inflate(getLayoutInflater());
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        //requestWindowFeature(Window.FEATURE_NO_TITLE);
+//        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+//                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(binding.getRoot());
 
         db = AppDatabase.getDbInstance(this.getApplicationContext());
         List<Note> noteList = db.noteDao().getAllNotes();
-
 
         title = binding.titleET;
         desc  = binding.NoteET;
@@ -85,10 +86,6 @@ public class NoteEditorActivity extends AppCompatActivity {
 
         });
 
-
-
-
-
     }
 
     @Override
@@ -100,18 +97,15 @@ public class NoteEditorActivity extends AppCompatActivity {
 
         if (titext.length()+descText.length()==0){
             Toast.makeText(this, "Empty note discarded", Toast.LENGTH_SHORT).show();
+        }else{
+        saveNewNote(titext,descText, newnote);
         }
-
     }
-
-
-
     void reqFocus(View view){
             view.requestFocus();
     }
 
     private void deleteNote(Note note){
-
 
         if (!newnote && note != null){
             db.noteDao().deleteNote(note);
@@ -125,13 +119,31 @@ public class NoteEditorActivity extends AppCompatActivity {
 
     private void saveNewNote(String title, String desc, boolean newnote){
 
-        Note note = new Note();
-        note.title = title;
-        note.desc = desc;
-        db.noteDao().insertNote(note);
-        Toast.makeText(this, "Note added", Toast.LENGTH_SHORT).show();
-        finish();
 
+        if(newnote) {
+            Note new_note = new Note();
+            new_note.title = title;
+            new_note.desc = desc;
+            db.noteDao().insertNote(new_note);
+            Toast.makeText(this, "Note added", Toast.LENGTH_SHORT).show();
+            finish();
+        }else{
+
+            String old_title = note.title;
+            String old_note = note.desc;
+
+            if(!old_title.equals(title) || !old_note.equals(desc)){
+                //Toast.makeText(this, "this is an Updated note ", Toast.LENGTH_SHORT).show();
+                note.title = title;
+                note.desc = desc;
+                db.noteDao().update(note.note_id , title, desc);
+                finish();
+            }else{
+                //Toast.makeText(this, "No update was made , same note.", Toast.LENGTH_SHORT).show();
+                finish();
+            }
+
+        }
 
 
 

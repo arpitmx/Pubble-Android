@@ -20,6 +20,11 @@ public interface NoteDao {
     @Delete
     void deleteNote(Note note);
 
+    @Query("UPDATE Note SET title = :new_title , `desc` = :new_desc WHERE note_id == :nid")
+    void update(int nid , String new_title, String new_desc );
+
+
+
 
 
 }

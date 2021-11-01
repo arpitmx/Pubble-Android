@@ -28,7 +28,7 @@
                 android:layout_marginEnd="5dp"
                 android:layout_marginTop="10dp"
                 android:text="My Notewwewepfwefjweoifjwoefijw"
-                android:textColor="#F2474747"
+                android:textColor="#F5222222"
                 android:textSize="23sp"
                 android:visibility="visible" />
 
@@ -44,7 +44,7 @@
                 android:layout_marginStart="6dp"
 
                 android:text="This is my notes."
-                android:textColor="#C1787878"
+                android:textColor="#EE404040"
                 android:maxLines="9"
                 android:ellipsize="end"
                 android:textSize="15sp"

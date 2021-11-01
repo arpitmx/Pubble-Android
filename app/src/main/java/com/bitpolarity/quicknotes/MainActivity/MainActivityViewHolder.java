@@ -12,13 +12,9 @@ import java.util.List;
 
 public class MainActivityViewHolder extends ViewModel {
 
-
     List<Note> getList(AppDatabase db){
         return db.noteDao().getAllNotes();
     }
-
-
-
 
 }
 

@@ -1,34 +1,21 @@
 package com.bitpolarity.quicknotes.MainActivity;
 
-import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityOptionsCompat;
-import androidx.core.view.ViewCompat;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.recyclerview.widget.DividerItemDecoration;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
-import android.app.ActivityOptions;
-import android.app.Instrumentation;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.view.animation.AnimationUtils;
-import android.widget.Toast;
 
 import com.bitpolarity.quicknotes.MainActivity.adapter.NoteAdapter;
-import com.bitpolarity.quicknotes.NoteEditorActivity;
-import com.bitpolarity.quicknotes.R;
+import com.bitpolarity.quicknotes.NoteEditor.NoteEditorActivity;
 import com.bitpolarity.quicknotes.databinding.ActivityMainBinding;
 import com.bitpolarity.quicknotes.db.AppDatabase;
 import com.bitpolarity.quicknotes.db.Note;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity  implements NoteAdapter.ULEventListner {
@@ -49,6 +36,9 @@ public class MainActivity extends AppCompatActivity  implements NoteAdapter.ULEv
         binding = ActivityMainBinding.inflate(getLayoutInflater());
 
         setContentView(binding.getRoot());
+
+        //startService(new Intent(getApplicationContext(), LockService.class));
+
 
         recyclerView = binding.notesRV;
         noteList = AppDatabase.getDbInstance(this).noteDao().getAllNotes();
@@ -127,11 +117,8 @@ public class MainActivity extends AppCompatActivity  implements NoteAdapter.ULEv
         super.onResume();
 
         noteList = mainActivityViewHolder.getList(db);
-        if(checkIfUpdated(noteList)){
             loadNoteList(noteList);
             recyclerView.scrollToPosition(noteList.size()-1);
-        }
-
 
     }
 

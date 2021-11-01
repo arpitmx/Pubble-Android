@@ -10,8 +10,9 @@
     <color name="grey_stroke">#CDCDCD</color>
     <color name="note_yellow">#FBE200</color>
 <!--    <color name="publist_yellow">#FF0048</color>-->
-    <color name="publist_yellow">#FF0048</color>
-    <color name="highlight_bg">#A9FF2663</color>
+    <color name="publist_yellow">#fc3c44</color>
+    <color name="highlight_bg">#C8F94C57</color>
+    <color name="secondary">#f94c57</color>
     <color name="transparent">#00FFFFFF</color>
-<!--    <color name="publist_yellow">#FFEA00</color>-->
+<!--    <color name="publist_yellow">#FF0048</color>-->
 </resources>
