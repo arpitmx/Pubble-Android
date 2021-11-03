@@ -3,6 +3,8 @@ package com.bitpolarity.quicknotes.NoteEditor;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
@@ -12,6 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.bitpolarity.quicknotes.R;
 import com.bitpolarity.quicknotes.databinding.ActivityNoteEditorBinding;
 import com.bitpolarity.quicknotes.db.AppDatabase;
 import com.bitpolarity.quicknotes.db.Note;
@@ -31,8 +34,31 @@ public class NoteEditorActivity extends AppCompatActivity {
     Note note;
 
 
+    private TextWatcher textWatcher = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+        }
+
+        @Override
+        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            update_through_watcher(charSequence.toString(), desc.getText().toString(), newnote);
+        }
+
+        @Override
+        public void afterTextChanged(Editable editable) {
+
+        }
+    };
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+       // overridePendingTransition(R.anim.slide_up, R.anim.pop_out);
+
         super.onCreate(savedInstanceState);
         binding = ActivityNoteEditorBinding.inflate(getLayoutInflater());
         //requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -61,6 +87,8 @@ public class NoteEditorActivity extends AppCompatActivity {
             reqFocus(desc);
         }
 
+        title.addTextChangedListener(textWatcher);
+
         binding.actionbarEditor.deletebutton.setOnClickListener(view -> {
             deleteNote(note);
         });
@@ -78,7 +106,6 @@ public class NoteEditorActivity extends AppCompatActivity {
             }
 
         });
-
         binding.actionbarEditor.backbutton.setOnClickListener(view -> {
 
         onBackPressed();
@@ -134,8 +161,8 @@ public class NoteEditorActivity extends AppCompatActivity {
 
             if(!old_title.equals(title) || !old_note.equals(desc)){
                 //Toast.makeText(this, "this is an Updated note ", Toast.LENGTH_SHORT).show();
-                note.title = title;
-                note.desc = desc;
+//                note.title = title;
+//                note.desc = desc;
                 db.noteDao().update(note.note_id , title, desc);
                 finish();
             }else{
@@ -144,8 +171,18 @@ public class NoteEditorActivity extends AppCompatActivity {
             }
 
         }
-
-
-
 }
-}
+
+
+
+    private void update_through_watcher(String title, String desc, boolean newnote) {
+
+        if(!newnote) {
+            db.noteDao().update(note.note_id, title, desc);
+
+        }
+        }
+    }
+
+
+

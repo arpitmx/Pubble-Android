@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">pubble</string>
+    <string name="app_name">Pubble</string>
     <string name="label_add">Add to read later</string>
     <string name="quino">Quino.</string>
-    <string name="publist">pubble.</string>
+    <string name="publist">Pubble.</string>
     <string name="add_notes">Add note</string>
 </resources>
