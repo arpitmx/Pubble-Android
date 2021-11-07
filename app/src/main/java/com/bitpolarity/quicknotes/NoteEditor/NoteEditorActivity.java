@@ -33,7 +33,6 @@ public class NoteEditorActivity extends AppCompatActivity {
     Boolean newnote = true;
     Note note;
 
-
     private TextWatcher textWatcher = new TextWatcher() {
         @Override
         public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -50,8 +49,6 @@ public class NoteEditorActivity extends AppCompatActivity {
 
         }
     };
-
-
 
 
     @Override

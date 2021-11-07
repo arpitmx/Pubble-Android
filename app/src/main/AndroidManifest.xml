@@ -9,9 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_pubble_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.QuickNotes">
-        <activity
-            android:name=".intents.SaveTextToExistingNoteActivity"
-            android:exported="true" />
+
         <activity
             android:name=".NoteEditor.NoteEditorActivity"
             android:exported="true" />
@@ -24,16 +22,30 @@
         <activity
             android:name=".intents.ReadLaterActivity"
             android:exported="true"
-            android:label="@string/label_add"
+            android:label="@string/label_create_new_note"
             android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.PROCESS_TEXT" />
-
                 <category android:name="android.intent.category.DEFAULT" />
 
                 <data android:mimeType="text/plain" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".intents.SaveTextToExistingNoteActivity"
+            android:exported="true"
+            android:label="@string/label_add_to_existing_note"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.PROCESS_TEXT" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+
+        </activity>
+
         <activity
             android:name=".MainActivity.MainActivity"
             android:exported="true">
