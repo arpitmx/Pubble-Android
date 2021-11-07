@@ -7,10 +7,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 
 import com.bitpolarity.quicknotes.MainActivity.adapter.NoteAdapter;
+import com.bitpolarity.quicknotes.db.DBManager;
 import com.bitpolarity.quicknotes.NoteEditor.NoteEditorActivity;
 import com.bitpolarity.quicknotes.databinding.ActivityMainBinding;
 import com.bitpolarity.quicknotes.db.AppDatabase;
@@ -18,64 +20,63 @@ import com.bitpolarity.quicknotes.db.Note;
 
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity  implements NoteAdapter.ULEventListner {
+public class MainActivity extends AppCompatActivity  implements NoteAdapter.ULEventListner   {
 
     ActivityMainBinding binding;
     private NoteAdapter noteAdapter;
-    MainActivityViewHolder mainActivityViewHolder;
+    DBManager dbManager;
     AppDatabase db;
     RecyclerView recyclerView;
     int size = 0;
     StaggeredGridLayoutManager staggeredGridLayoutManager;
     List<Note> noteList;
-    int grids= 2;
+    MainActivityViewModel MVM;
+    SharedPreferences preferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
-
         setContentView(binding.getRoot());
 
-        //startService(new Intent(getApplicationContext(), LockService.class));
-
-
         recyclerView = binding.notesRV;
-        noteList = AppDatabase.getDbInstance(this).noteDao().getAllNotes();
+        preferences = getSharedPreferences("griddb", MODE_PRIVATE);
+        int last_saved_grid = getLastGrid();
 
+        dbManager =  new ViewModelProvider(this).get(DBManager.class);
+        MVM = new ViewModelProvider(this, new MainActivityViewModelFactory(last_saved_grid, getApplication())).get(MainActivityViewModel.class);
+
+        noteList = dbManager.getNoteList();
         db = AppDatabase.getDbInstance(this.getApplicationContext());
-        mainActivityViewHolder=  new ViewModelProvider(this).get(MainActivityViewHolder.class);
-
-      //  binding.actionbar.textView.setAnimation(AnimationUtils.loadAnimation(this, R.anim.pop_in));
 
 
-        binding.actionbar.changegrid.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(grids==2){
-                    grids =1;
-                staggeredGridLayoutManager.setSpanCount(grids);
-            }else{
-                    grids=2;
-                staggeredGridLayoutManager.setSpanCount(grids);
-                }
-            }
+
+
+
+        binding.actionbar.changegrid.setOnClickListener(view -> {
+                changeGrids();
         });
-
         binding.floatingActionButton.setOnClickListener(view -> {
+
             startActivityForResult(new Intent(this, NoteEditorActivity.class), 100);
+
         });
-
-
 
 
         initRecyclerView();
         loadNoteList(noteList);
+
+    }
+
+
+
+    int getLastGrid(){
+        return preferences.getInt("last_grid",2);
     }
 
     private void initRecyclerView(){
-
-        staggeredGridLayoutManager = new StaggeredGridLayoutManager(grids, StaggeredGridLayoutManager.VERTICAL);
+        int g = MVM.getGrids();
+        staggeredGridLayoutManager = new StaggeredGridLayoutManager(g, StaggeredGridLayoutManager.VERTICAL);
         staggeredGridLayoutManager.setReverseLayout(true);
         recyclerView.setLayoutManager(staggeredGridLayoutManager);
         recyclerView.hasFixedSize();
@@ -85,10 +86,7 @@ public class MainActivity extends AppCompatActivity  implements NoteAdapter.ULEv
         recyclerView.setAdapter(noteAdapter);
     }
 
-
-
     public void loadNoteList(List<Note> noteList){
-
 
         if (noteList.size() > 0) {
             noteAdapter.setNoteList(noteList);
@@ -99,6 +97,11 @@ public class MainActivity extends AppCompatActivity  implements NoteAdapter.ULEv
             binding.notesRV.setVisibility(View.GONE);
             binding.emptyTxt.setVisibility(View.VISIBLE);
         }
+    }
+
+
+    void changeGrids(){
+            staggeredGridLayoutManager.setSpanCount(MVM.changeGrid());
     }
 
     boolean checkIfUpdated(List<Note> noteList){
@@ -116,7 +119,7 @@ public class MainActivity extends AppCompatActivity  implements NoteAdapter.ULEv
     protected void onResume() {
         super.onResume();
 
-        noteList = mainActivityViewHolder.getList(db);
+        noteList = dbManager.getNoteList();
             loadNoteList(noteList);
             recyclerView.scrollToPosition(noteList.size()-1);
 
@@ -137,6 +140,8 @@ public class MainActivity extends AppCompatActivity  implements NoteAdapter.ULEv
         Intent intent = new Intent(this, NoteEditorActivity.class);
         intent.putExtra("data",position);
          startActivity(intent);
-
     }
+
+
+
 }

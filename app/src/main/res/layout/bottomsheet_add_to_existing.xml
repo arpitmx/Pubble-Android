@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    android:id="@+id/bottom_sheet_lin_lay"
+>
+
+    <EditText
+        android:id="@+id/notes_searchbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:hint="Search notes"
+        android:focusable="true"
+        android:clickable="true"
+        android:focusedByDefault="true"
+        android:textSize="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/hmed"
+        android:background="@drawable/title_bg"
+        android:gravity="center_vertical"
+        android:paddingStart="10dp"
+        android:elevation="4dp"
+
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_notes_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:clipToPadding="false"
+        android:visibility="visible"
+        android:paddingBottom="50dp"
+        android:padding="10dp"
+        android:background="@drawable/title_bg"
+        >
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <EditText
+                android:id="@+id/edit_note_bottom_sheet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleET"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:textColorHighlight="@color/highlight_bg"
+                android:background="@drawable/note_bg_two"
+                android:fontFamily="@font/mmedium"
+                android:textStyle="normal"
+                android:gravity="start"
+                android:maxHeight="350dp"
+                android:minHeight="300dp"
+                android:textColor="#303030"
+                android:hint="Start writing here..."
+                android:padding="5dp"
+                android:paddingStart="10dp"
+                android:textCursorDrawable="@null"
+                android:visibility="gone"
+                android:textSize="15dp" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:weightSum="10"
+        android:elevation="5dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/lina"
+        >
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bottomsheet_cancel_button"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="3.5"
+            android:background="@null"
+            android:textColor="#7A7A7A"
+            android:gravity="center"
+            android:fontFamily="@font/hb"
+            android:layout_marginStart="100dp"
+            android:textSize="17dp"
+            android:textAllCaps="false"
+            android:text="Cancel" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bottomsheet_addnote_button"
+            android:layout_width="0dp"
+            android:layout_weight="6"
+            android:layout_height="48dp"
+            android:background="@drawable/note_add_button_bg"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:fontFamily="@font/hb"
+            android:layout_gravity="center_vertical"
+            android:textSize="17dp"
+            android:textAllCaps="false"
+            android:text="Add notes" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>
+
+
+<!--<ImageButton-->
+<!--android:id="@+id/edit_note_button_bottom_sheet"-->
+<!--android:layout_width="0dp"-->
+<!--android:layout_weight="2"-->
+<!--android:layout_height="match_parent"-->
+<!--android:layout_alignParentStart="true"-->
+<!--android:scaleX="1"-->
+<!--android:scaleY="1"-->
+<!--android:background="@null"-->
+<!--android:src="@drawable/ic_baseline_edit_24"-->
+<!--app:tint="@color/publist_yellow" />-->

@@ -1,4 +1,4 @@
-package com.bitpolarity.quicknotes.NoteEditor;
+package com.bitpolarity.quicknotes.db;
 
 import android.app.Application;
 import android.widget.Toast;
@@ -10,9 +10,10 @@ import androidx.lifecycle.ViewModel;
 import com.bitpolarity.quicknotes.db.AppDatabase;
 import com.bitpolarity.quicknotes.db.Note;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class NoteEditorViewModel extends AndroidViewModel {
+public class DBManager extends AndroidViewModel {
 
     int NOTE_ADDED = 1;
     int NOTE_UPDATED =2;
@@ -22,20 +23,28 @@ public class NoteEditorViewModel extends AndroidViewModel {
     AppDatabase db;
     List<Note> noteList;
 
-    public NoteEditorViewModel(@NonNull Application application) {
+    public DBManager(@NonNull Application application) {
         super(application);
         db = AppDatabase.getDbInstance(application.getApplicationContext());
-        noteList = db.noteDao().getAllNotes();
+        noteList = setNoteList(db);
+    }
+
+
+    public AppDatabase getDb(){
+        return db;
+    }
+
+    private List<Note> setNoteList(AppDatabase db){
+        return  db.noteDao().getAllNotes();
     }
 
    public List<Note> getNoteList(){
-        return noteList;
+        return db.noteDao().getAllNotes();
     }
 
    public Note getNote(int position){
         return  noteList.get(position);
     }
-
 
     public int saveNewNote(Note note,String ntitle, String ndesc, boolean newnote){
 
