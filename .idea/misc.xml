@@ -3,32 +3,44 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/QuickNotes/app/src/main/res/drawable/create_note_button_bg.xml" value="0.2760416666666667" />
         <entry key="..\:/QuickNotes/app/src/main/res/drawable/cursor_editnote.xml" value="0.2760416666666667" />
         <entry key="..\:/QuickNotes/app/src/main/res/drawable/curved_corners_bottom_sheet.xml" value="0.2604166666666667" />
+        <entry key="..\:/QuickNotes/app/src/main/res/drawable/curved_search_bg.xml" value="0.2760416666666667" />
         <entry key="..\:/QuickNotes/app/src/main/res/drawable/dark_four_side_borders_post.xml" value="0.2717948717948718" />
         <entry key="..\:/QuickNotes/app/src/main/res/drawable/dark_four_side_borders_post_dimmer.xml" value="0.2717948717948718" />
         <entry key="..\:/QuickNotes/app/src/main/res/drawable/dark_item_event_bg.xml" value="0.2717948717948718" />
+        <entry key="..\:/QuickNotes/app/src/main/res/drawable/dialog_bg.xml" value="0.2609375" />
         <entry key="..\:/QuickNotes/app/src/main/res/drawable/gradient_two.xml" value="0.2760416666666667" />
         <entry key="..\:/QuickNotes/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.2760416666666667" />
+        <entry key="..\:/QuickNotes/app/src/main/res/drawable/ic_baseline_close_24.xml" value="0.20416666666666666" />
         <entry key="..\:/QuickNotes/app/src/main/res/drawable/ic_baseline_more_vert_24.xml" value="0.2657407407407407" />
         <entry key="..\:/QuickNotes/app/src/main/res/drawable/ic_baseline_note_add_24.xml" value="0.2760416666666667" />
         <entry key="..\:/QuickNotes/app/src/main/res/drawable/ic_baseline_save_24.xml" value="0.2760416666666667" />
+        <entry key="..\:/QuickNotes/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.2760416666666667" />
+        <entry key="..\:/QuickNotes/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2760416666666667" />
+        <entry key="..\:/QuickNotes/app/src/main/res/drawable/main_search.xml" value="0.2760416666666667" />
+        <entry key="..\:/QuickNotes/app/src/main/res/drawable/main_search_bar_bg.xml" value="0.2760416666666667" />
         <entry key="..\:/QuickNotes/app/src/main/res/drawable/modalbkg.xml" value="0.2604166666666667" />
         <entry key="..\:/QuickNotes/app/src/main/res/drawable/note_add_button_bg.xml" value="0.2657407407407407" />
         <entry key="..\:/QuickNotes/app/src/main/res/drawable/note_bg.xml" value="0.25" />
         <entry key="..\:/QuickNotes/app/src/main/res/drawable/note_bg_two.xml" value="0.2760416666666667" />
+        <entry key="..\:/QuickNotes/app/src/main/res/drawable/rv_bg.xml" value="0.2760416666666667" />
+        <entry key="..\:/QuickNotes/app/src/main/res/drawable/search_bar_bg.xml" value="0.2760416666666667" />
         <entry key="..\:/QuickNotes/app/src/main/res/drawable/secondary_button_bg.xml" value="0.2604166666666667" />
         <entry key="..\:/QuickNotes/app/src/main/res/drawable/title_bg.xml" value="0.2569230769230769" />
         <entry key="..\:/QuickNotes/app/src/main/res/layout/actionbar_edit_notes.xml" value="0.264" />
         <entry key="..\:/QuickNotes/app/src/main/res/layout/activity_auth.xml" value="0.2598958333333333" />
-        <entry key="..\:/QuickNotes/app/src/main/res/layout/activity_main.xml" value="0.37248840803709427" />
+        <entry key="..\:/QuickNotes/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/QuickNotes/app/src/main/res/layout/activity_note_addition.xml" value="0.2598958333333333" />
         <entry key="..\:/QuickNotes/app/src/main/res/layout/activity_note_editor.xml" value="0.3851091142490372" />
         <entry key="..\:/QuickNotes/app/src/main/res/layout/activity_save_text_to_existing_note.xml" value="0.17291666666666666" />
-        <entry key="..\:/QuickNotes/app/src/main/res/layout/activity_save_to_existing_note.xml" value="0.254981884057971" />
+        <entry key="..\:/QuickNotes/app/src/main/res/layout/activity_save_to_existing_note.xml" value="0.264" />
+        <entry key="..\:/QuickNotes/app/src/main/res/layout/bottom_search.xml" value="0.4" />
         <entry key="..\:/QuickNotes/app/src/main/res/layout/bottombar_edit_notes.xml" value="0.264" />
-        <entry key="..\:/QuickNotes/app/src/main/res/layout/bottomsheet_add_to_existing.xml" value="0.176" />
+        <entry key="..\:/QuickNotes/app/src/main/res/layout/bottomsheet_add_to_existing.xml" value="0.4" />
         <entry key="..\:/QuickNotes/app/src/main/res/layout/bottomsheet_addnotes.xml" value="0.2" />
+        <entry key="..\:/QuickNotes/app/src/main/res/layout/dialog_add_to_existing.xml" value="0.264" />
         <entry key="..\:/QuickNotes/app/src/main/res/layout/existing_note_row.xml" value="0.72" />
         <entry key="..\:/QuickNotes/app/src/main/res/layout/note_row.xml" value="0.2" />
         <entry key="..\:/QuickNotes/app/src/main/res/layout/quino_actionbar.xml" value="0.4" />

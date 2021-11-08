@@ -37,26 +37,24 @@ public class MainActivity extends AppCompatActivity  implements NoteAdapter.ULEv
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
+
         setContentView(binding.getRoot());
 
         recyclerView = binding.notesRV;
-        preferences = getSharedPreferences("griddb", MODE_PRIVATE);
+        preferences = getSharedPreferences("grid_db", MODE_PRIVATE);
         int last_saved_grid = getLastGrid();
 
         dbManager =  new ViewModelProvider(this).get(DBManager.class);
         MVM = new ViewModelProvider(this, new MainActivityViewModelFactory(last_saved_grid, getApplication())).get(MainActivityViewModel.class);
 
         noteList = dbManager.getNoteList();
-        db = AppDatabase.getDbInstance(this.getApplicationContext());
-
-
-
+        db = dbManager.getDb();
 
 
         binding.actionbar.changegrid.setOnClickListener(view -> {
                 changeGrids();
         });
-        binding.floatingActionButton.setOnClickListener(view -> {
+        binding.actionbar2.floatingActionButton.setOnClickListener(view -> {
 
             startActivityForResult(new Intent(this, NoteEditorActivity.class), 100);
 
@@ -69,9 +67,8 @@ public class MainActivity extends AppCompatActivity  implements NoteAdapter.ULEv
     }
 
 
-
     int getLastGrid(){
-        return preferences.getInt("last_grid",2);
+        return preferences.getInt("last_grid",3);
     }
 
     private void initRecyclerView(){
@@ -81,7 +78,6 @@ public class MainActivity extends AppCompatActivity  implements NoteAdapter.ULEv
         recyclerView.setLayoutManager(staggeredGridLayoutManager);
         recyclerView.hasFixedSize();
         recyclerView.setNestedScrollingEnabled(false);
-
         noteAdapter = new NoteAdapter(this, this);
         recyclerView.setAdapter(noteAdapter);
     }
@@ -114,7 +110,6 @@ public class MainActivity extends AppCompatActivity  implements NoteAdapter.ULEv
         }
     }
 
-
     @Override
     protected void onResume() {
         super.onResume();
@@ -124,6 +119,7 @@ public class MainActivity extends AppCompatActivity  implements NoteAdapter.ULEv
             recyclerView.scrollToPosition(noteList.size()-1);
 
     }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {

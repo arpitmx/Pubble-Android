@@ -73,8 +73,18 @@ public class DBManager extends AndroidViewModel {
             }
 
         }
+    }
 
 
+
+   public void quickSaveNote(String title, String desc){
+        Note note = new Note();
+        note.title = title;
+        note.desc = desc;
+        db.noteDao().insertNote(note);
 
     }
 }
+
+
+

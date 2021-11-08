@@ -6,13 +6,15 @@
         <shape
             android:shape="rectangle"
             >
-            <corners android:radius="10dp"
+
+
+            <corners android:topLeftRadius="15dp"
+                android:topRightRadius="15dp"
                 />
 
             <solid
-                android:color="#23DADADA"
+                android:color="#FDFDFD"
                 />
-
 
 
         </shape>

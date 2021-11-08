@@ -6,11 +6,16 @@
         <shape
             android:shape="rectangle"
             >
+
+            <stroke
+                    android:color="#16E1E1E1"
+                android:width="4dp"
+                />
             <corners android:radius="10dp"
                 />
 
             <solid
-                android:color="#23DADADA"
+                android:color="#FAFAFA"
                 />
 
 

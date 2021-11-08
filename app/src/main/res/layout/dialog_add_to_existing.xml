@@ -4,9 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="30dp"
+
     android:orientation="vertical"
-    android:background="@color/white"
-    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    android:background="@drawable/dialog_bg"
+    android:layout_gravity="center"
     android:id="@+id/bottom_sheet_lin_lay"
 >
 

@@ -15,7 +15,6 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:layout_toStartOf="@+id/deletebutton"
         android:background="@color/white"
         android:fontFamily="@font/hb"
         android:gravity="center"

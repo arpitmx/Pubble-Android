@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="70dp"
+    android:id="@+id/actionbar_layout"
+   android:weightSum="10"
+android:background="@drawable/curved_search_bg"
+    >
+
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/frameLayout"
+        android:layout_width="0dp"
+        android:layout_weight="10"
+        android:layout_height="match_parent"
+
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:background="@drawable/main_search_bar_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+
+
+        <EditText
+            android:id="@+id/notes_searchbar"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="9"
+            android:singleLine="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:drawableStart="@drawable/ic_baseline_search_24"
+            android:drawablePadding="10dp"
+            android:paddingStart="10dp"
+            android:background="@null"
+            android:fontFamily="@font/hmed"
+            android:gravity="center_vertical"
+            android:hint="Search notes"
+            android:iconifiedByDefault="false"
+            android:textColorHint="#D5FF3441"
+            android:textSize="20dp" />
+
+
+        <ImageButton
+            android:id="@+id/calc_clear_txt_Prise"
+            android:layout_width="0dp"
+            android:background="@null"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:paddingEnd="10dp"
+            android:paddingTop="2dp"
+            android:layout_marginStart="5dp"
+            android:focusable="true"
+            android:visibility="gone"
+            android:layout_gravity="right|center_vertical"
+            android:src="@drawable/ic_baseline_close_24"
+            />
+
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <ImageButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="55dp"
+        android:layout_margin="5dp"
+        android:layout_height="55dp"
+        android:layout_gravity="center"
+        android:background="@drawable/create_note_button_bg"
+        android:src="@android:drawable/ic_input_add"
+        app:tint="@color/publist_yellow" />
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
