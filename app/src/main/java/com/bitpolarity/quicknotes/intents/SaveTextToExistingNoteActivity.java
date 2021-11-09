@@ -41,7 +41,6 @@ public class SaveTextToExistingNoteActivity extends FragmentActivity implements 
     RecyclerView recyclerView;
     StaggeredGridLayoutManager staggeredGridLayoutManager;
     ActivitySaveToExistingNoteBinding binding;
-    List<Note> filteredList;
 
 
 
@@ -127,17 +126,15 @@ public class SaveTextToExistingNoteActivity extends FragmentActivity implements 
 
         binding.layoutLin.setAnimation(AnimationUtils.loadAnimation(this, R.anim.slide_up));
         binding.notesSearchbar.addTextChangedListener(searchWatcher);
+        binding.bottomsheetCancelButton.setOnClickListener(view -> {
+            finish();
+        });
 
-
-
-        if(binding.notesSearchbar.hasFocus()){
-            binding.notesSearchbar.setText("");
-            setinitList();
-        }
 
 
         binding.calcClearTxtPrise.setOnClickListener(view -> {
             binding.notesSearchbar.getText().clear();
+            setinitList();
         });
 
 
@@ -171,9 +168,6 @@ public class SaveTextToExistingNoteActivity extends FragmentActivity implements 
     public void loadNoteList(List<Note> noteList){
             noteAdapter.setNotesList(noteList);
         }
-
-
-
 
 
     @Override

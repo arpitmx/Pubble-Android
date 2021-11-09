@@ -4,6 +4,8 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="50dp"
+    android:elevation="5dp"
+    android:background="@drawable/action_bar_bg"
     android:id="@+id/actionbar_layout"
     >
 
@@ -15,7 +17,6 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:background="@color/white"
         android:fontFamily="@font/hb"
         android:gravity="center"
         android:text="@string/publist"
@@ -48,11 +49,7 @@
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#E4E4E4"
-        />
+
 
 
 

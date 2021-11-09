@@ -4,39 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity.MainActivity">
+    tools:context=".MainActivity.MainNoteFragment">
 
     <include
         android:id="@+id/actionbar"
         layout="@layout/quino_actionbar"
         android:layout_width="match_parent"
-        android:visibility="visible"
-        android:layout_height="wrap_content" />
-
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/notesRV"
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/actionbar"
-        android:clipToPadding="false"
-        android:visibility="gone"
-        android:paddingBottom="100dp" />
+        android:visibility="visible" />
 
 
-    <TextView
-        android:id="@+id/empty_txt"
+    <FrameLayout
+        android:id="@+id/fragment_holder"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_below="@id/actionbar"
-        android:layout_alignParentBottom="true"
-        android:fontFamily="@font/hmed"
-        android:gravity="center"
-        android:text="Write something beautiful! ✍🏼"
-        android:textSize="20dp"
-        android:visibility="gone"
         />
-
 
     <include
         android:id="@+id/actionbar2"

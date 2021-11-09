@@ -19,6 +19,7 @@ android:background="@drawable/curved_search_bg"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
         android:orientation="horizontal"
+        android:layout_marginEnd="5dp"
         android:weightSum="10"
         android:background="@drawable/main_search_bar_bg"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,7 +33,7 @@ android:background="@drawable/curved_search_bg"
         <EditText
             android:id="@+id/notes_searchbar"
             android:layout_width="0dp"
-            android:layout_height="60dp"
+            android:layout_height="65dp"
             android:layout_weight="8"
             android:singleLine="true"
             android:clickable="true"
@@ -42,7 +43,6 @@ android:background="@drawable/curved_search_bg"
             android:paddingStart="15dp"
             android:paddingEnd="15dp"
             android:background="@null"
-            android:paddingBottom="5dp"
             android:fontFamily="@font/hmed"
             android:gravity="center_vertical"
             android:hint="Search notes"
@@ -71,17 +71,6 @@ android:background="@drawable/curved_search_bg"
 
 
     </androidx.appcompat.widget.LinearLayoutCompat>
-
-    <ImageButton
-        android:id="@+id/floatingActionButton"
-        android:layout_width="55dp"
-        android:layout_margin="5dp"
-        android:layout_height="55dp"
-        android:layout_gravity="center"
-        android:background="@drawable/create_note_button_bg"
-        android:src="@android:drawable/ic_input_add"
-        app:tint="@color/publist_yellow" />
-
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>
