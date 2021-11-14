@@ -4,4 +4,4 @@
 Pubble notes , the suuuuuuuuper quick way of note taking, from super quick to super formatable.
 
 
-![bitp](https://user-images.githubusercontent.com/59350776/141063516-98a98453-11f9-47c0-ace7-5028ebad4589.png)
+<img src="https://user-images.githubusercontent.com/59350776/141678560-87a180ef-5bbc-4c9b-a89f-0108877f49cf.png" width="350">
