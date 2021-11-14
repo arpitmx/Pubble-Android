@@ -1,5 +1,6 @@
 # Pubble Notes
-![iconn](https://user-images.githubusercontent.com/59350776/141062360-4645b8ef-ad23-4d40-95bb-5af50d85c528.png)
+<img src="https://user-images.githubusercontent.com/59350776/141062360-4645b8ef-ad23-4d40-95bb-5af50d85c528.png" width="150">
+
 
 Pubble notes , the suuuuuuuuper quick way of note taking, from super quick to super formatable.
 
