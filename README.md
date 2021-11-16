@@ -4,8 +4,7 @@
 I always neeeded a note app to which I could add anything I found that was interesting or some important note or stuff that I found on 
 the internet which I would like to read and research on later.
 
-It had always broke my focus and the momentum I was having due to minimize the app I was reading on , slide up to home apps , click on the searchbar
-, struggle to write kwwp and then correct it to keep and open the keep notes app and then tap on the plus button and then add the stuff I want.. :\
+The old notes apps had always broke my focus and the momentum that I was having because, 1. minimize the app I was reading on , 2. slide up to home apps , 3. click on the searchbar , 4. struggle to write kwwp and then correct it to keep and open the keep notes app and then tap on the plus button and then add the stuff I want..hufffff :\
 
 Yes, it sucked, atleast for me..., a loooooooooooooooooooooooot.
 
