@@ -11,23 +11,43 @@ Yes, it sucked, atleast for me..., a loooooooooooooooooooooooot.
 
 So I thought of solving this problem through making my own notes app with extra touch ups that reduces all those things into a TWO STEP PROCESS.
 
-Say 👋 to Pubble notes , an app which make it simply quick and convinient to add notes while you do your research without loosing focus!
-Isn't it flawless?
+***Say 👋 to Pubble notes , an app which make it simply quick and convinient to add notes while you do your research without loosing focus!
+Isn't it flawless?***
+
+## Easily search through your pubble 🔍.
+
+<img src="https://user-images.githubusercontent.com/59350776/142011883-179a88ba-0111-48f3-aa4e-50fb1860c718.gif" width="250">
+
+## Directly open the pubble editor through notification tiles💫.
+
+<img src="https://user-images.githubusercontent.com/59350776/142011936-17baed5f-e9ca-4baf-9298-2316cbea1a88.gif" width="250">
+
+## Directly add the selected text to your pubble without even opening the app➰. 
+
+<img src="https://user-images.githubusercontent.com/59350776/142014947-e823b48e-998f-4b9a-a1aa-18f1f1d7011e.gif" width="250">
+
+--------------------------------------------------------------
+
+## Other screens.
+
+<p float="left">
+  <img src="https://user-images.githubusercontent.com/59350776/142013040-9769036f-e7d9-4ec9-9990-ac85ba761645.jpg" width="250">
+  <img src="https://user-images.githubusercontent.com/59350776/142013094-afd71fc1-b04f-48a7-afa4-28cd0d8a2c5a.jpg" width="250">
+  <img src="https://user-images.githubusercontent.com/59350776/142013102-0e4bf3f8-6183-4ad7-a21b-db86a4216768.jpg" width="250">
+  <img src="https://user-images.githubusercontent.com/59350776/142013120-78c1d394-032f-4817-a901-e43dd46c0721.jpg" width="250">
+</p>
 
 
-<img src="https://user-images.githubusercontent.com/59350776/142011883-179a88ba-0111-48f3-aa4e-50fb1860c718.gif" width="350">
+## Open to contribution, just fork the project!💙
 
-<img src="https://user-images.githubusercontent.com/59350776/142011936-17baed5f-e9ca-4baf-9298-2316cbea1a88.gif" width="350">
-
-<img src="https://user-images.githubusercontent.com/59350776/142012390-f78bd48e-7219-474e-a222-d9064b4cf87b.gif" width="350">
-
-
-![p1](https://user-images.githubusercontent.com/59350776/142013040-9769036f-e7d9-4ec9-9990-ac85ba761645.jpg)
-![p2](https://user-images.githubusercontent.com/59350776/142013094-afd71fc1-b04f-48a7-afa4-28cd0d8a2c5a.jpg)
-![p3](https://user-images.githubusercontent.com/59350776/142013102-0e4bf3f8-6183-4ad7-a21b-db86a4216768.jpg)
-![p4](https://user-images.githubusercontent.com/59350776/142013120-78c1d394-032f-4817-a901-e43dd46c0721.jpg)
+- **Tech stacks** : Java , XML.
+- **DB** : Room persistent database(SQLite).
+- **Architecture** : MVVM architecture is used in this for better flexibility.
+- **Others** : Android jetpack.
 
 
 
+
+--------------------------------------------------------------------------------------------------------------------------------------
 
 <img src="https://user-images.githubusercontent.com/59350776/141678560-87a180ef-5bbc-4c9b-a89f-0108877f49cf.png" width="350">
