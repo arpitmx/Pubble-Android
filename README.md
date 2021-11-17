@@ -1,17 +1,23 @@
 # *Pubble Notes*
 <img src="https://user-images.githubusercontent.com/59350776/141062360-4645b8ef-ad23-4d40-95bb-5af50d85c528.png" width="80">
 
-I always neeeded a note app to which I could add anything I found that was interesting or some important note or stuff that I found on 
-the internet which I would like to read and research on later.
+I always wanted a note app to which I could add anything I found that was interesting or some important note or stuff that I found on 
+the internet which I would like to read or research later.
 
-The old notes apps had always broke my focus and the momentum that I was having because, 1. minimize the app I was reading on , 2. slide up to home apps , 3. click on the searchbar , 4. struggle to write kwwp and then correct it to keep and open the keep notes app and then tap on the plus button and then add the stuff I want..hufffff :\
+The old notes apps had always broken my focus and the momentum that I was having because I had to do a cumbersome of steps just to add something, 
 
-Yes, it sucked, atleast for me..., a loooooooooooooooooooooooot.
+1. Minimize the app I was reading on, 
+2. Slide up to app menu, 
+3. Click on the search bar, 
+4. Struggle to write 'kwwp' and then correct it to "keep" and open the keep notes app and then tap on the plus button and then add the stuff I want..huff :\
 
-So I thought of solving this problem through making my own notes app with extra touch ups that reduces all those things into a TWO STEP PROCESS.
+Yes, it sucked, at least for me..., a lot.
+
+So I thought of solving this problem by making my own notes app with extra touch-ups that reduces all those things into a TWO-STEP PROCESS.
 
 ***Say 👋 to Pubble notes , an app which make it simply quick and convinient to add notes while you do your research without loosing focus!
 Isn't it flawless?***
+
 
 ## Easily search through your pubble 🔍.
 
