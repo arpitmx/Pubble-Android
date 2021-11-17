@@ -1,19 +1,42 @@
 # *Pubble Notes.*
 <img src="https://user-images.githubusercontent.com/59350776/141062360-4645b8ef-ad23-4d40-95bb-5af50d85c528.png" width="80">
 
-I always wanted a note app to which I could add anything I found that was interesting or some important note or stuff that I found on 
-the internet which I would like to read or research later.
+## Why?
 
-The old notes apps had always broken my focus and the momentum that I was having because I had to do a cumbersome of steps just to add something, 
+I always wanted a note app to which I could add anything, which I found that was interesting or some important note I want to quickly add to my list of stuff or something that I found on 
+the internet which I would like to read or research later while sipping a cup of coffee.
+
+The present notes apps have always broken my focus and the momentum that I was having while reading because I needed to do a cumbersome of steps just to add something, 
 
 1. Minimize the app I was reading on, 
 2. Slide up to app menu, 
 3. Click on the search bar, 
-4. Struggle to write 'kwwp' and then correct it to "keep" and open the keep notes app and then tap on the plus button and then add the stuff I want..huff :\
+4. Struggle to write 'kwwp' and then correct it to "keep" and open the keep notes app and then tap on the plus button and then add the things I want..huff :\
 
-Yes, it sucked, at least for me..., a lot.
+other cases for opening the note app are very similar to these.
+Yes, it was inconvenient, at least for me., a lot.
 
-So I thought of solving this problem by making my own notes app with extra touch-ups that reduces all those things into a TWO-STEP PROCESS.
+So I thought of making it more efficient for people like me by designing my own notes app with extra touch-ups 
+that dissolve all those steps into a "Two quick step process".
+
+**There are multiple methods through which you can add or reach your notes in Pubble.**
+
+1. You can select the text you want to add to your notes by selecting the text and selecting <img src="https://user-images.githubusercontent.com/59350776/142134350-28005493-50a2-4316-a4b6-f4832e193d22.jpg" width="20">
+ More -> 
+   Add to notes, from the default text selection toolbar.
+  (Additionally, you can set a title to the note and also edit the selected text before adding it to your notes. )  
+  
+   <img src="https://user-images.githubusercontent.com/59350776/142133713-318a0509-adba-4787-bd66-38586f699027.gif" width="250">
+
+2. You can directly open Pubble's Note editor screen through the notification 
+   bar tiles (The section in the notification bar where wifi, Bluetooth, etc. tiles are present, you just have to add Pubble Notes to your tiles menu )
+  
+   <img src="https://user-images.githubusercontent.com/59350776/142133705-fe2823cf-881f-470a-b498-b90fba60e3af.gif" width="250">
+
+
+3. You can add a piece of text to your existing notes through selecting the text, <img src="https://user-images.githubusercontent.com/59350776/142134350-28005493-50a2-4316-a4b6-f4832e193d22.jpg" width="20"> More -> Add to existing notes. Search or select the note you want to add the selected text and click add notes, notes will be added.
+	
+
 
 ***Say 👋 to Pubble notes , an app which make it simply quick and convinient to add notes while you do your research without loosing focus!
 Isn't it flawless?***
@@ -50,6 +73,14 @@ Isn't it flawless?***
 - **Architecture** : MVVM architecture is used in this for better flexibility.
 - **Others** : Android jetpack.
 
+## Goals :
+
+
+- [ ] Make text editor more formatable.
+- [ ] Add backup options which while store encrypted notes backup to your Google drive.
+- [ ] Add an passlock for more privacy.
+- [ ] Add filtering in search
+- [ ] Add options for pins , labels , colors for note filtering
 
 
 
