@@ -1,4 +1,4 @@
-# *Pubble Notes*
+# *Pubble Notes.*
 <img src="https://user-images.githubusercontent.com/59350776/141062360-4645b8ef-ad23-4d40-95bb-5af50d85c528.png" width="80">
 
 I always wanted a note app to which I could add anything I found that was interesting or some important note or stuff that I found on 
