@@ -3,21 +3,18 @@
 
 ## Why?
 
-I always wanted a note app to which I could add anything, which I found that was interesting or some important note I want to quickly add to my list of stuff or something that I found on 
-the internet which I would like to read or research later while sipping a cup of coffee.
+I always wanted a note app to which I could add anything that I found interesting or some important note I wanted to quickly add to my list of stuff or something that I found on the internet that I would like to read or research later while sipping a cup of coffee.
 
-The present notes apps have always broken my focus and the momentum that I was having while reading because I needed to do a cumbersome of steps just to add something, 
+The present note apps have always broken my focus and the momentum that I was having while reading because I needed to do a cumbersome series of steps just to add something,
 
-1. Minimize the app I was reading on, 
-2. Slide up to app menu, 
-3. Click on the search bar, 
-4. Struggle to write 'kwwp' and then correct it to "keep" and open the keep notes app and then tap on the plus button and then add the things I want..huff :\
+1. I had to minimise the app on which I was reading.
+2. Slide up to the app menu,
+3. Click on the search bar,
+4. Struggle to write 'kwwp' and then correct it to "keep" and open the Keep notes app and then tap on the plus button and then add the things I want..huff :\
 
-other cases for opening the note app are very similar to these.
-Yes, it was inconvenient, at least for me., a lot.
+Other cases for opening the note app are very similar to these. Yes, it was inconvenient, at least for me., a lot.
 
-So I thought of making it more efficient for people like me by designing my own notes app with extra touch-ups 
-that dissolve all those steps into a "Two quick step process".
+So I thought of making it more efficient for people like me by designing my own notes app with extra touch-ups that dissolve all those steps into a "two-quick step process".
 
 **There are multiple methods through which you can add or reach your notes in Pubble.**
 
